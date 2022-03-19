@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -26,25 +25,39 @@
   </head>
 
   <body>
-    <div class="p-3">
-      <h1 class="mb-4">Add User</h1>
-      <form id="addUserForm">
+    <div class="form-bg-container p-5">
+      <header class="text-white mb-5">
+        <h1>Update Password</h1>
+      </header>
+      <form id="updatePasswordForm">
         <section class="mb-3">
-          <label for="name">Name</label>
-          <input type="text" id="name" class="form-control" />
-          <p id="nameErrMsg" class="text-danger"></p>
+          <label for="newPassword" class="text-white">NEW PASSWORD</label>
+          <input
+            type="password"
+            placeholder="Create New password"
+            class="form-control"
+            id="newPassword"
+          />
+          <p id="newPasswordErrMsg" class="error-msg"></p>
         </section>
         <section class="mb-3">
-          <label for="email">Email</label>
-          <input type="text" id="email" class="form-control" />
-          <p id="emailErrMsg" class="text-danger"></p>
+          <label for="confirmPassword" class="text-white"
+            >CONFIRM PASSWORD</label
+          >
+          <input
+            type="password"
+            placeholder="Confirm password"
+            class="form-control"
+            id="confirmPassword"
+          />
+          <p id="confirmPasswordErrMsg" class="error-msg"></p>
         </section>
-        <section>
-          <button type="submit" class="btn btn-primary">Submit</button>
+        <section class="text-center mt-5">
+          <button type="submit" id="updateBtn" class="btn btn-primary">
+            Update
+          </button>
         </section>
       </form>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>
-<!-- blur event and form valiations demo -->
